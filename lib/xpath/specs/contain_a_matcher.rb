@@ -1,5 +1,7 @@
 # -*- encoding: utf-8 -*-
 
+require 'nokogiri'
+
 module Xpath
   module Specs
 
