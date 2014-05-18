@@ -5,6 +5,7 @@ require 'nokogiri'
 module Xpath
   module Specs
 
+    # A custom rspec matcher to verify some html against a PagePart instance
     class ContainA
       def initialize(page_part)
         @page_part = page_part
