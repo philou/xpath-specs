@@ -22,7 +22,7 @@ As an example, suppose you have website with dishes and receipes. You want to te
 
 ### Declare your page parts
 
-In order to encourage reuse, create custom page part definition files
+In order to encourage reuse, create one or many custom page part definition files
 
 ```ruby
 # spec/support/knows_page_parts.rb
