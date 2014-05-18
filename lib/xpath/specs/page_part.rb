@@ -30,14 +30,14 @@ module Xpath
 
       # Creates another PagePart instance to match elements relatively to self
       # Uses a completely new description. It's the prefered way to mach sub
-      # elements
+      # elements, xpath should usually start with '/'
       def with(description, xpath)
         PagePart.new(description, self.xpath+xpath, self)
       end
 
       # Creates another PagePart instance to match elements relatively to self
       # Concatenates the descriptions. It's the prefered way to add constraints
-      # to the currently matched elements
+      # to the currently matched elements, xpath should usually start with '['
       def that(description, xpath)
         PagePart.new("#{self.description} that #{description}",
                      self.xpath+xpath,
