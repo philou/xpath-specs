@@ -97,6 +97,14 @@ expected the page to contain a dish that is named Grilled Lobster (//table[@id='
        but not a dish that is named Grilled Lobster (//table[@id='dish-panel']//tr[td[contains(.,'#{name}')]])
 ```
 
+### Testing from Cucumber
+
+Just use the 'page' in place of your view :
+
+```ruby
+expect(page).to contain_a(dish_panel)
+```
+
 ## Contributing
 
 1. Fork it
