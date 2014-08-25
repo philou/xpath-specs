@@ -1,5 +1,5 @@
 module Xpath
   module Specs
-    VERSION = "0.0.3"
+    VERSION = "0.1.0"
   end
 end

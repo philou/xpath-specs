@@ -16,11 +16,11 @@ module Xpath
         doc_contains(@page_part)
       end
 
-      def failure_message_for_should
-        failure_message_for_should_ex(@page_part)
+      def failure_message
+        failure_message_ex(@page_part)
       end
 
-      def failure_message_for_should_not
+      def failure_message_when_negated
         "expected the page not to contain #{@page_part.long_description})"
       end
 
@@ -46,9 +46,9 @@ module Xpath
         !matched_node(page_part).empty?
       end
 
-      def failure_message_for_should_ex(page_part)
+      def failure_message_ex(page_part)
         if parent_cannot_be_found(page_part)
-          failure_message_for_should_ex(page_part.parent)
+          failure_message_ex(page_part.parent)
         elsif !page_part.has_parent
           [description,
            "but could not find #{page_part.long_description}"].join("\n")
